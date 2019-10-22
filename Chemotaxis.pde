@@ -4,17 +4,17 @@
  {     
  	//initialize bacteria variables here
  	background(0);
- 	frameRate(800);
+ 	frameRate(0.5);
  	size(600,600);
-	bob = new Bacteria[200];   
+	bob = new Bacteria[400];   
 	for(int i = 0; i < bob.length; i++){
 		bob[i] = new Bacteria();
 	}
 	noStroke();
  	fill(50);
- 	ellipse(300, 300, 60,60);
- 	fill(255);
- 	rect(298, 255, 3, 15);
+  	ellipse(300, 300, 60,60);
+  	fill(255);
+	rect(298, 255, 3, 15);
  	fill(233,23,25);
  	ellipse(300, 252, 5, 9);
  }   
@@ -23,12 +23,15 @@
  void draw()   
  {  
  	for(int i = 0; i < bob.length; i++){
- 		// bob[i].show();    
- 		// bob[i].move();
+ 		bob[i].show();    
+ 		bob[i].move();
  	}	
  }  
+ 
  void mousePressed(){
- 	
+ 	fill(0);
+ 	rect(0, 0, 600, 600);
+ 	frameRate(800);
  }
 
 
@@ -44,8 +47,9 @@
  		colorPicker();
  	}
  	void move(){
- 		myX = myX + (int) (Math.random()*3)-1;
- 		myY = myY + (int) (Math.random()*3)-1;
+
+			myX = myX + (int) (Math.random()*3)-1;
+			myY = myY + (int) (Math.random()*3)-1;
  	}
  	void colorPicker(){
  		col = (int)((Math.random()*6)+1);
@@ -67,7 +71,7 @@
  			fill(255, 145, 0);
  		}
  		if(col == 1){
- 			fill(255, 145, 0);
+ 			fill(255, 0, 0);
  		}
  		noStroke();
  		ellipse(myX, myY, 5,5);
