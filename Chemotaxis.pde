@@ -3,20 +3,46 @@
  void setup()   
  {     
  	//initialize bacteria variables here
- 	background(0);
+ 	background(0, 14, 48);
  	frameRate(0.5);
  	size(600,600);
 	bob = new Bacteria[400];   
 	for(int i = 0; i < bob.length; i++){
 		bob[i] = new Bacteria();
 	}
+	
+	noStroke();
+	fill(100);
+ 	rect(0,450,600,270);
+
+ 	fill(170);
+ 	rect(60, 50, 150, 400);
+ 	fill(255, 230, 43);
+ 	for(int f = 60; f < 400; f = f + 15){
+ 		for(int i = 65; i < 205; i = i + 13){
+ 			rect(i,f,8,13);
+ 		}
+ 	}
+ 		
+ 	fill(170);
+ 	rect(400, 110, 150, 340);
+ 	fill(255, 230, 43);
+ 	for(int f = 120; f < 400; f = f + 15){
+ 		for(int i = 405; i < 545; i = i + 13){
+ 			rect(i,f,8,13);
+ 		}
+ 	}
+ 		
+
+
 	noStroke();
  	fill(50);
-  	ellipse(300, 300, 60,60);
+  	ellipse(300, 420, 60,60);
   	fill(255);
-	rect(298, 255, 3, 15);
+	rect(298, 375, 3, 15);
  	fill(233,23,25);
- 	ellipse(300, 252, 5, 9);
+ 	ellipse(299, 372, 5, 9);
+
  }   
 	
 
@@ -29,8 +55,30 @@
  }  
  
  void mousePressed(){
- 	fill(0);
+ 	fill(0, 14, 48);
  	rect(0, 0, 600, 600);
+ 	
+ 	fill(100);
+ 	rect(0,450,600,270);
+
+ 	fill(170);
+ 	rect(60, 50, 150, 400);
+ 	fill(255, 230, 43);
+ 	for(int f = 60; f < 400; f = f + 15){
+ 		for(int i = 65; i < 205; i = i + 13){
+ 			rect(i,f,8,13);
+ 		}
+ 	}
+ 		
+ 	fill(170);
+ 	rect(400, 110, 150, 340);
+ 	fill(255, 230, 43);
+ 	for(int f = 120; f < 400; f = f + 15){
+ 		for(int i = 405; i < 545; i = i + 13){
+ 			rect(i,f,8,13);
+ 		}
+ 	}
+
  	frameRate(800);
  }
 
@@ -43,7 +91,7 @@
 
  	Bacteria(){
  		myX = 300;
- 		myY = 300;
+ 		myY = 420;
  		colorPicker();
  	}
  	void move(){
@@ -74,7 +122,7 @@
  			fill(255, 0, 0);
  		}
  		noStroke();
- 		ellipse(myX, myY, 5,5);
+ 		ellipse(myX, myY, 10,10);
  	}
 
  }      
