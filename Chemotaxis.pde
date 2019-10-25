@@ -77,9 +77,9 @@
  		for(int i = 405; i < 545; i = i + 13){
  			rect(i,f,8,13);
  		}
- 	}
+ 	}  
 
- 	frameRate(800);
+ 	frameRate(8000);
  }
 
 
